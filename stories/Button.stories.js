@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { Button } from "./Button"
 import "./grid.css"
@@ -49,3 +49,13 @@ Focus.parameters = { pseudo: { focus: true } }
 
 export const Active = Template.bind()
 Active.parameters = { pseudo: { active: true } }
+
+export const ButtonTest = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <>
+      <div>Count: {count}</div>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </>
+  );
+};
